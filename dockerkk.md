@@ -57,4 +57,5 @@ Hello and welcome Joao
 `
 ___
 ## Docker compose
-
+First create a redus database container called `redis`, image `redis:alpine`.
+run command `docker run --name -d redis:alpine`
