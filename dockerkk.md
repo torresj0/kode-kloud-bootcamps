@@ -59,3 +59,19 @@ ___
 ## Docker compose
 First create a redus database container called `redis`, image `redis:alpine`.
 run command `docker run --name -d redis:alpine`
+
+Next, create a simple container called 'clickcounter'with the image `kodekloud/click-counter`, link it to the `redis` 
+container that we created in the previous task and then expose it on the host port 8085.
+The `clickcounter` app run on port `5000`
+Solution -> `docker run -d --name=clickcounter --link redis:redis -p 8085:5050 kodekloud/click-counter`
+
+Delete the `redis` and the `clickcounter` containers
+Solution:
+	STOP THE CONTAINER:
+		`docker stop redis
+		docker stop clickcounter`
+	DELETE THE CONTAINER
+		`docker rm redis
+		docker rm clickcounter`
+
+
